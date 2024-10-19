@@ -1,0 +1,5 @@
+services:
+  drtest.fetcher:
+    class: Drupal\drtest\Service\Fetcher
+    arguments: [ '@current_user']
+

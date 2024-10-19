@@ -7,7 +7,6 @@ use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Session\AccountInterface;
-use Drupal\drtest\Service\Fetcher;
 use Drupal\drtest\Service\FetcherInteface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -29,6 +28,11 @@ class TestBlock extends BlockBase implements ContainerFactoryPluginInterface {
    */
   protected $storage;
 
+  /**
+   * The fetcher service.
+   *
+   * @var \Drupal\drtest\Service\FetcherInteface
+   */
   protected $fetcher;
 
   /**
@@ -43,7 +47,7 @@ class TestBlock extends BlockBase implements ContainerFactoryPluginInterface {
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
    *   The entity type manager.
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityTypeManagerInterface $entity_type_manager, Fetcher $fetcher) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityTypeManagerInterface $entity_type_manager, FetcherInteface $fetcher) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
 
     $this->storage = $entity_type_manager;
@@ -67,7 +71,7 @@ public static function create(ContainerInterface $container, array $configuratio
 
     $types = $this->storage->getStorage('node_type')->loadMultiple();
 
-    $userName = $this->fetcher->fetchNodeByRoute();
+    $userName = $this->fetcher->fetchUserByRoute();
     var_dump($userName);
 
     foreach($types as $type) {
