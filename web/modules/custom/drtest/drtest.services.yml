@@ -2,4 +2,11 @@ services:
   drtest.fetcher:
     class: Drupal\drtest\Service\Fetcher
     arguments: [ '@current_user']
-
+  drtest.route_subscriber:
+    class: Drupal\drtest\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+  access_check.drtest:
+    class: Drupal\drtest\Access\DrtestAccessCheck
+    tags:
+      - { name: access_check, applies_to: _drtest_access_check }
