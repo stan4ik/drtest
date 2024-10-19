@@ -1,0 +1,6 @@
+name: Drtest
+type: module
+description: Drupal test case.
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
