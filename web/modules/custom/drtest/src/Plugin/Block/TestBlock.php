@@ -71,8 +71,8 @@ public static function create(ContainerInterface $container, array $configuratio
 
     $types = $this->storage->getStorage('node_type')->loadMultiple();
 
-    $userName = $this->fetcher->fetchUserByRoute();
-    var_dump($userName);
+    $node = $this->fetcher->fetchNodeByRoute();
+    var_dump($node);
 
     foreach($types as $type) {
         $values = [

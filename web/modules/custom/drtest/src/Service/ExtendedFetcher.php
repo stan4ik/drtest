@@ -23,7 +23,7 @@ class ExtendedFetcher extends Fetcher {
     $node = \Drupal::routeMatch()->getParameter('node');
 
     if(isset($node)) {
-        $nodeName = $node->label();
+        $nodeName = $node->getTrimmedTitle();
     }
 
     return $nodeName;

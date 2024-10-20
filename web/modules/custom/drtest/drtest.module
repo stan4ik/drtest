@@ -3,6 +3,7 @@
 
 use Drupal\Core\Render\Element;
 use Drupal\user\UserInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
 
 /**
  * Implements hook_theme().
@@ -76,4 +77,13 @@ function drtest_user_predelete(UserInterface $account): void {
   $storage->delete(
     $storage->loadMultiple($drtest_entity_ids)
   );
+}
+
+/**
+ * @param EntityTypeInterface[] $entity_types
+ */
+function drtest_entity_type_build(&$entity_types) {
+  if (isset($entity_types['node'])) {
+    $entity_types['node']->setClass('Drupal\drtest\Entity\DrtestNode');
+  }
 }
