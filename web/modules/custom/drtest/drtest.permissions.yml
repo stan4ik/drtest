@@ -1,0 +1,3 @@
+administer drtest entities:
+  title: 'Administer drtest entities'
+  restrict access: true

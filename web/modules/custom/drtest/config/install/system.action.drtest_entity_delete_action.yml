@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - drtest
+id: drtest_entity_delete_action
+label: 'Delete drtest entities'
+type: drtest_entity
+plugin: entity:delete_action:drtest_entity
+configuration: {  }

@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - drtest
+id: drtest_entity_save_action
+label: 'Save drtest entities'
+type: drtest_entity
+plugin: entity:save_action:drtest_entity
+configuration: {  }

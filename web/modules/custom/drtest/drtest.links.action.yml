@@ -1,0 +1,5 @@
+drtest_entity.add_form:
+  title: 'Add drtest entity'
+  route_name: entity.drtest_entity.add_form
+  appears_on:
+    - entity.drtest_entity.collection

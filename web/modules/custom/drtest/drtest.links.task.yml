@@ -1,0 +1,18 @@
+entity.drtest_entity.view:
+  title: 'View'
+  route_name: entity.drtest_entity.canonical
+  base_route: entity.drtest_entity.canonical
+entity.drtest_entity.edit_form:
+  title: 'Edit'
+  route_name: entity.drtest_entity.edit_form
+  base_route: entity.drtest_entity.canonical
+entity.drtest_entity.delete_form:
+  title: 'Delete'
+  route_name: entity.drtest_entity.delete_form
+  base_route: entity.drtest_entity.canonical
+  weight: 10
+entity.drtest_entity.collection:
+  title: 'Drtest entities'
+  route_name: entity.drtest_entity.collection
+  base_route: system.admin_content
+  weight: 10

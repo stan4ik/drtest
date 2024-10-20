@@ -1,0 +1,10 @@
+entity.drtest_entity.edit_form:
+  route_name: entity.drtest_entity.edit_form
+  group: drtest_entity
+  title: 'Edit'
+
+entity.drtest_entity.delete_form:
+  route_name: entity.drtest_entity.delete_form
+  group: drtest_entity
+  title: 'Delete'
+  weight: 10

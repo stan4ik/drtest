@@ -1,0 +1,5 @@
+entity.drtest_entity.collection:
+  title: 'Drtest entities'
+  description: 'List of drtest entities.'
+  route_name: entity.drtest_entity.collection
+  parent: system.admin_content
